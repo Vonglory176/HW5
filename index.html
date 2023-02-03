@@ -31,7 +31,8 @@
 
         <!-- HOME/ADD A TASK Header -->
         <div data-role="header" data-theme='c'>
-            <h1 style="text-transform: uppercase; font-size: 20px; letter-spacing: 2px;">Add a To-Do Item</h1>
+            <h1 style="text-transform: uppercase; font-size: 20px; letter-spacing: 2px;">Let's add an item to your To-Do
+                List!</h1>
 
             <!-- Navbar -->
             <div data-role="navbar">
@@ -49,8 +50,7 @@
             style="background-image: url(CSS/Images/blanknotebook2.png) ; background-size: cover ; " ;>
             <br>
             <div class="itemContainer">
-                <h2 style="letter-spacing: 2px;">Let's add an item to your To-Do List!</h2><br>
-
+                <br><br><br>
                 <div id="toDoInputBox">
                     <!-- TEXT INPUT FOR LIST ITEM -->
                     <label style="text-shadow: none; font-size: 20px;">What would you like to get done today?</label>
@@ -85,7 +85,7 @@
                         style="background:rgba(0, 128, 0, 0.6) ; color: white ; font-family: 'Roboto Condensed', sans-serif; letter-spacing: 2px; text-shadow: none;">
                         not important
                         and not
-                        urgent</label>
+                        urgent</label> <br>
 
 
                     <!-- ADD ITEM TO LIST BUTTON -->
@@ -125,19 +125,24 @@
 
 
         <!-- VIEW TASKS IN PROGRESS Content -->
-        <div data-role="content" data-theme='c'>
-            <div class="itemContainer">
+        <div data-role="content" data-theme='c'
+            style="background-image: url(CSS/Images/paper.jpg) ; background-size: cover ;">
+            <div class="itemContainerTasksInProgress">
 
-                <h2 style="text-transform: uppercase;">Tasks in Progress</h2>
+                <div class="leftSubContainer">
+                    <br>
+                    <img src="CSS/Images/todo.jpg" alt="Desk with To Do List" class="image" width="380" height="220">
 
-                <img src="CSS/Images/todo.jpg" alt="Desk with To Do List" class="image" width="380" height="220">
+                    <!-- ORDER BY PRIORITY BUTTON -->
+                    <input type="button" value="View My Tasks" id="viewMyTasksButton">
+                    <input type="button" value="Prioritize My Tasks" id="prioritizeButton">
+                    <input type="button" value="View High Priority Tasks Only" id="viewHighPriorityOnlyButton">
+                    <br>
+                </div>
 
-                <!-- ORDER BY PRIORITY BUTTON -->
-                <input type="button" value="View My Tasks" id="viewMyTasksButton">
-                <input type="button" value="Prioritize My Tasks" id="prioritizeButton">
-                <input type="button" value="View High Priority Tasks Only" id="viewHighPriorityOnlyButton">
-
-                <div id="inProgressTasksDisplay"></div></br>
+                <div class="rightSubContainer">
+                    <div id="inProgressTasksDisplay"></div></br>
+                </div>
             </div>
         </div>
 
@@ -171,8 +176,7 @@
         <!-- VIEW COMPLETED TASKS Content -->
         <div data-role="content" data-theme='c'
             style="background-image: url(CSS/Images/paper.jpg) ; background-size: cover;">
-            <h2 style="text-transform: uppercase;">Tasks Completed</h2>
-            <div id="tasksCompleted"></div></br>
+            <div id="tasksCompleted"></div><br>
 
         </div>
 

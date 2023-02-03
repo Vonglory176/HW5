@@ -5,6 +5,10 @@ input {
     font-family: 'Roboto Condensed', sans-serif;
 }
 
+ul,
+li {
+    font-size: 1.6em;
+}
 
 .image {
     display: block;
@@ -16,6 +20,26 @@ input {
     width: 40%;
     display: block;
     margin-left: auto;
+    margin-right: auto;
+}
+
+.itemContainerTasksInProgress {
+    width: 100%;
+    height: 100%;
+    display: inline-flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.leftSubContainer {
+    display: flex-start;
+    margin-left: 150px;
+    margin-right: auto;
+}
+
+.rightSubContainer {
+    min-width: 500px;
+    margin-left: 50px;
     margin-right: auto;
 }
 
