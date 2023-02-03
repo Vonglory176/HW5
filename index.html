@@ -1,112 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
-    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
-    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 
-    <title>Document</title>
+    <link rel="stylesheet" href="css/themes/notcute.min.css" />
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile.structure-1.3.2.min.css" />
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@1,300&display=swap"
+        rel="stylesheet">
+
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <title>To-Do List</title>
 </head>
+
+
 <body>
-    <!-- HOME PAGE ======================================================================================== -->
-    <div data-role="page" id="home">
+    <!-- HOME/ADD A TASK PAGE ======================================================================================== -->
+    <div data-role="page" id="addATask">
 
-        <!-- Home Header --> 
-        <div data-role="header" data-theme='b'>
-            <h2>math program - home</h2>
-        
-            <!-- Navbar -->
-            <div data-role="navbar" data-theme='b'>
-                <ul>
-                <li><a href="#home">Home Page</a></li>
-                <li><a href="#add">Add Page</a></li>
-                <li><a href="#subtract">Subtract Page</a></li>
-                </ul>
-            </div>
-            
-        </div>  
-
-
-        <!-- Home Content -->
-        <div data-role="content" data-theme='e'>
-            Real application function code
-        </div>
-
-
-          <!-- Home Footer --> 
-          <div data-role="footer" data-theme='b'>
-            <h3>Copyrigtht 2023 by Kurt Friedrich</h3>
-        </div>
-
-    </div>
-
-   <!-- ADD PAGE ======================================================================================== -->
-    <div data-role="page" id="add">
-        
-        <!-- Add Header --> 
-        <div data-role="header" data-theme='b'>
-            <h2>math program - add</h2>
+        <!-- HOME/ADD A TASK Header -->
+        <div data-role="header">
+            <h1>Add a To-Do Item</h1>
 
             <!-- Navbar -->
-            <div data-role="navbar" data-theme='b'>
+            <div data-role="navbar">
                 <ul>
-                 <li><a href="#home">Home Page</a></li>
-                 <li><a href="#add">Add Page</a></li>
-                 <li><a href="#subtract">Subtract Page</a></li>
+                    <li><a href="#viewToDo">View Tasks in Progress</a></li>
+                    <li><a href="#viewCompleted">View Completed Tasks</a></li>
                 </ul>
             </div>
-            
+
         </div>
 
 
-        <!-- Add Content -->
-        <div data-role="content" data-theme='e'>
-            Real application function code
+        <!-- HOME/ADD A TASK Home Content -->
+        <div data-role="content" data-theme='b'>
+            <div class="itemContainer">
+                <h2>Let's add an item to your To-Do List!</h2>
+
+                <div id="toDoInputBox">
+                    <!-- TEXT INPUT FOR LIST ITEM -->
+                    <label>What would you like to get done today?</label>
+
+                    <input type="text" id="toDoInput"></br>
+
+
+                    <!-- //PRIORITY PICKER RADIO BUTTONS -->
+                    <label>How important and urgent is this task?</label>
+
+                    <input type="radio" name="urgencySelector" id="radioVeryHigh">
+                    <label for="radioVeryHigh" style="background:rgba(159, 22, 22, 0.5) ; color: white; font-family: 'Roboto Condensed', sans-serif;
+                    "> very
+                        important and very urgent!!</label>
+
+                    <input type="radio" name="urgencySelector" id="radioHigh">
+                    <label for="radioHigh"
+                        style="background:rgba(252, 103, 3, 0.498) ; color: white;font-family: 'Roboto Condensed', sans-serif;">not
+                        important
+                        but
+                        urgent!</label>
+
+                    <input type="radio" name="urgencySelector" id="radioMedium">
+                    <label for="radioMedium" style="background: rgb(239, 168, 3, 0.5) ; color: white;  font-family: 'Roboto Condensed', sans-serif;
+                    "> important
+                        but
+                        not
+                        urgent</label>
+
+                    <input type="radio" name="urgencySelector" id="radioLow">
+                    <label for="radioLow"
+                        style="background:rgba(0, 128, 0, 0.5) ; color: white;     font-family: 'Roboto Condensed', sans-serif;">
+                        not important
+                        and not
+                        urgent</label></br>
+
+
+                    <!-- ADD ITEM TO LIST BUTTON -->
+                    <div id="add">
+                        <input type="button" value="Add Item" id="addItemButton">
+                    </div>
+                </div>
+            </div>
         </div>
 
 
-        <!-- Add Footer --> 
+        <!-- HOME/ADD A TASK Footer -->
         <div data-role="footer" data-theme='b'>
-            <h3>Copyrigtht 2023 by Kurt Friedrich</h3>
+            <h3>Copyright 2023 by Skyler Conley & Alesia Cameron </h3>
         </div>
 
     </div>
-    
-      <!-- SUBTRACT PAGE ======================================================================================== -->
-    <div data-role="page" id="subtract">
-        
 
-        <!-- Subtract Header --> 
+
+    <!-- VIEW TASKS IN PROGRESS PAGE ======================================================================================== -->
+    <div data-role="page" id="viewToDo">
+
+        <!-- VIEW TASKS IN PROGRESS Header -->
         <div data-role="header" data-theme='b'>
-            <h2>math program - subtract</h2>
-       
+            <h1> Tasks in Progress </h1>
+
             <!-- Navbar -->
             <div data-role="navbar" data-theme='b'>
                 <ul>
-                <li><a href="#home">Home Page</a></li>
-                <li><a href="#add">Add Page</a></li>
-                <li><a href="#subtract">Subtract Page</a></li>
+                    <li><a href="#addATask">Add a Task</a></li>
+                    <li><a href="#viewCompleted">View Completed Tasks</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+
+        <!-- VIEW TASKS IN PROGRESS Content -->
+        <div data-role="content" data-theme='b'>
+            <div class="itemContainer">
+
+                <h2>Tasks in Progress</h2>
+
+                <img src="CSS/Images/todo.jpg" alt="Desk with To Do List" class="image" width="380" height="220">
+
+                <!-- ORDER BY PRIORITY BUTTON -->
+                <input type="button" value="View My Tasks" id="viewMyTasksButton">
+                <input type="button" value="Prioritize My Tasks" id="prioritizeButton">
+                <input type="button" value="View High Priority Tasks Only" id="viewHighPriorityOnlyButton">
+
+                <div id="inProgressTasksDisplay"></div></br>
+            </div>
+        </div>
+
+
+        <!-- VIEW TASKS IN PROGRESS Footer -->
+        <div data-role="footer" data-theme='b'>
+            <h3>Copyright 2023 by Skyler Conley & Alesia Cameron</h3>
+        </div>
+
+    </div>
+
+    <!-- VIEW COMPLETED TASKS PAGE ======================================================================================== -->
+    <div data-role="page" id="viewCompleted">
+
+
+        <!-- VIEW COMPLETED TASKS Header -->
+        <div data-role="header" data-theme='b'>
+            <h1>Tasks Completed</h1>
+
+            <!-- Navbar -->
+            <div data-role="navbar" data-theme='b'>
+                <ul>
+                    <li><a href="#addATask">Add a Task</a></li>
+                    <li><a href="#viewToDo">View Tasks in Progress</a></li>
                 </ul>
             </div>
         </div>
 
 
-        <!-- Subtract Content -->
-        <div data-role="content" data-theme='e'>
-            Real application function code
+        <!-- VIEW COMPLETED TASKS Content -->
+        <div data-role="content" data-theme='b'>
+            <h2>Tasks Completed</h2>
+            <div id="tasksCompleted"></div></br>
+
         </div>
 
 
-        <!-- Subtract Footer --> 
+        <!-- VIEW COMPLETED TASKS Footer -->
         <div data-role="footer" data-theme='b'>
-            <h3>Copyrigtht 2023 by Kurt Friedrich</h3>
+            <h3>Copyright 2023 by Skyler Conley & Alesia Cameron</h3>
         </div>
 
     </div>
-     <!-- ======================================================================================== -->
+    <!-- ======================================================================================== -->
     <script src="main.js"></script>
+
+
 </body>
+
 </html>
