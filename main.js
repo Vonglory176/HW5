@@ -94,12 +94,12 @@ function printUncompletedTasks(text, index, priority){
     })
 
     //Affiliated Label
-    let elementLabel = $(`<label class="listedTask">Task Completed? &emsp; ${text}</label> <br>`)//Setting HTML & Text
+    let elementLabel = $(`<label>${text}</label>`)//Setting HTML & Text
     $(elementLabel).attr('for', `taskRadio${index}`)//Linking to Radio Button
     $(elementLabel).attr('id', `taskLabel${index}`)//Setting ID
     $(elementLabel).css('color',`${colorPicker(priority)}`)//Setting Color
 
-    $("#incompleteTaskDisplay").append($(elementRadio),$(elementLabel))//Printing to Screen
+    $("#incompleteTaskDisplay").append("•&emsp;",$(elementLabel),$(elementRadio)," -- Task Completed? <br>")//Printing to Screen
 }
 
 //Color Code Based on Priority System
@@ -111,14 +111,11 @@ function colorPicker(priority) {
     else if (priority === 5) return 'darkgreen' //For Complete
 }
 
-
-//PRIORITIZE MY TASKS BUTTON CLICK
-
 //VIEW COMPLETED TASKS BUTTON CLICK
 function printCompletedTasks() {
     for (let i = 0; i < toDoArray.length; i++){
         if (toDoArray[i].priority === 5) {
-            let element = $(`<li class="listedTask">${toDoArray[i].task}</li>`)//Setting HTML
+            let element = $(`<li>${toDoArray[i].task}" -- Completed!"</li>`)//Setting HTML
             $(element).css('color',`${colorPicker(toDoArray[i].priority)}`)//Setting Color
             $("#completedTaskDisplay").append($(element))//Printing to Screen
         }
