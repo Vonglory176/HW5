@@ -176,8 +176,20 @@
         <!-- VIEW COMPLETED TASKS Content -->
         <div data-role="content" data-theme='c'
             style="background-image: url(CSS/Images/paper.jpg) ; background-size: cover;">
-            <div id="tasksCompleted"></div><br>
+            <div class="itemContainerTasksInProgress">
 
+                <div class="leftSubContainer">
+                    <br>
+                    <img src="CSS/Images/todo.jpg" alt="Desk with To Do List" class="image" width="380" height="220">
+
+                    <input type="button" value="View My Completed Tasks" id="viewMyCompletedTasksButton">
+                    <br>
+                </div>
+
+                <div class="rightSubContainer">
+                    <div id="tasksCompleted"></div><br>
+                </div>
+            </div>
         </div>
 
 
