@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    $('#addItemButton').on('click', addItem)
+    $('#addTaskButton').on('click', addTask)
     $('#viewMyTasksButton').on('click', viewMyTasks)
     $('#viewHighPriorityOnlyButton').on('click', showHighPriorityTasks)
     //$('#prioritizeButton').on('click', prioritizeTasks())
@@ -11,7 +11,7 @@ function task(task, priority) {this.task = task, this.priority = priority}
 let toDoArray = []
 
 //FUNCTION ADDING ITEMS TO TO-DO LIST
-async function addItem() {
+async function addTask() {
     try {
         //GRABBING INFO FROM URGENCY SELECTOR RADIO BUTTONS
         let radioID = await radiocheck(), todo = await inputCheck() //Verifying Button-Press/Text-Input
@@ -35,7 +35,7 @@ async function addItem() {
 //Radio Button Check
 function radiocheck() {
     return new Promise((resolve, reject) => {
-        document.querySelectorAll('input[name="urgencySelector"]').forEach(i => { //Iterating all input elements with name 'urgencySelector'
+        document.querySelectorAll('input[name="priorityRadio"]').forEach(i => { //Iterating all input elements with name 'urgencySelector'
             if (i.checked) resolve(i.id) //Returns ID of checked
         })
         reject("Please select an priority level!")
@@ -53,7 +53,7 @@ function inputCheck() {
 //LIST TASKS IN PROGRESS
 //SHOW TO-DO LIST BUTTON CLICKED
 function viewMyTasks() {
-    $("#inProgressTasksDisplay").html("") //Resetting Current Listed Tasks
+    $("#incompleteTaskDisplay").html("") //Resetting Current Listed Tasks
     let toDoArray = sortArray() //Sorting array from highest to low priority 
     
     for (let i = 0; i < toDoArray.length; i++) {
@@ -64,7 +64,7 @@ function viewMyTasks() {
 
 //VIEW HIGH PRIORITY TASKS ONLY
 function showHighPriorityTasks() {
-    $("#inProgressTasksDisplay").html("") //Resetting Current Listed Tasks
+    $("#incompleteTaskDisplay").html("") //Resetting Current Listed Tasks
     let toDoArray = sortArray()  //Sorting array from highest to low priority 
 
     for(let i = 0; i < toDoArray.length; i++){
@@ -94,12 +94,12 @@ function printUncompletedTasks(text, index, priority){
     })
 
     //Affiliated Label
-    let elementLabel = $(`<label>Completed? &emsp; ${text}</label> <br>`)//Setting HTML & Text
+    let elementLabel = $(`<label class="listedTask">Task Completed? &emsp; ${text}</label> <br>`)//Setting HTML & Text
     $(elementLabel).attr('for', `taskRadio${index}`)//Linking to Radio Button
     $(elementLabel).attr('id', `taskLabel${index}`)//Setting ID
     $(elementLabel).css('color',`${colorPicker(priority)}`)//Setting Color
 
-    $("#inProgressTasksDisplay").append($(elementRadio),$(elementLabel))//Printing to Screen
+    $("#incompleteTaskDisplay").append($(elementRadio),$(elementLabel))//Printing to Screen
 }
 
 //Color Code Based on Priority System
@@ -118,9 +118,9 @@ function colorPicker(priority) {
 function printCompletedTasks() {
     for (let i = 0; i < toDoArray.length; i++){
         if (toDoArray[i].priority === 5) {
-            let element = $(`<li>${toDoArray[i].task}</li>`)//Setting HTML
+            let element = $(`<li class="listedTask">${toDoArray[i].task}</li>`)//Setting HTML
             $(element).css('color',`${colorPicker(toDoArray[i].priority)}`)//Setting Color
-            $("#tasksCompleted").append($(element))//Printing to Screen
+            $("#completedTaskDisplay").append($(element))//Printing to Screen
         }
     }
 }
