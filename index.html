@@ -13,7 +13,8 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@1,300&display=swap"rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@1,300&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="CSS/style.css">
 
     <title>To-Do List</title>
@@ -38,7 +39,8 @@
         </div>
 
         <!-- HOME/ADD A TASK Home Content -->
-        <div data-role="content" data-theme='c'style="background-image: url(CSS/Images/blanknotebook2.png); background-size: cover;";><br>
+        <div data-role="content" data-theme='c'
+            style="background-image: url(CSS/Images/blanknotebook2.png); background-size: cover;" ;><br>
             <div class="itemContainer"><br><br><br>
 
                 <div id="toDoInputBox">
@@ -50,33 +52,38 @@
                     <label class="headerLabel">How important and urgent is this task?</label>
 
                     <input type="radio" name="priorityRadio" id="radioVeryHigh">
-                    <label class="priorityLabel" for="radioVeryHigh" style="background:rgba(159, 22, 22, 0.6);"> Important and very urgent!!</label>
+                    <label class="priorityLabel" for="radioVeryHigh" style="background:rgba(159, 22, 22, 0.6);">
+                        Important and very urgent!!</label>
 
                     <input type="radio" name="priorityRadio" id="radioHigh">
-                    <label class="priorityLabel" for="radioHigh" style="background:rgba(252, 103, 3, 0.6);">Not urgent but still important!</label>
+                    <label class="priorityLabel" for="radioHigh" style="background:rgba(252, 103, 3, 0.6);">Not urgent
+                        but still important!</label>
 
                     <input type="radio" name="priorityRadio" id="radioMedium">
-                    <label class="priorityLabel" for="radioMedium" style="background: rgb(239, 168, 3, 0.6);"> Kind of important but not very urgent</label>
-                        
+                    <label class="priorityLabel" for="radioMedium" style="background: rgb(239, 168, 3, 0.6);"> Kind of
+                        important but not very urgent</label>
+
                     <input type="radio" name="priorityRadio" id="radioLow">
-                    <label class="priorityLabel" for="radioLow" style="background:rgba(0, 128, 0, 0.6);"> Neither important nor urgent</label> <br>
+                    <label class="priorityLabel" for="radioLow" style="background:rgba(0, 128, 0, 0.6);"> Neither
+                        important nor urgent</label> <br>
 
                     <!-- ADD ITEM TO LIST BUTTON -->
                     <div id="addTaskDiv"><input type="button" value="Add Item" id="addTaskButton"></div>
-
                 </div>
             </div>
         </div>
 
         <!-- HOME/ADD A TASK Footer -->
-        <div data-role="footer" data-theme='c'><h3>Copyright 2023 by Skyler Conley & Alesia Cameron</h3></div>
+        <div data-role="footer" data-theme='c'>
+            <h3>Copyright 2023 by Skyler Conley & Alesia Cameron</h3>
+        </div>
     </div>
 
     <!-- ==================================================================================================================== -->
     <!-- VIEW TASKS IN PROGRESS PAGE ======================================================================================== -->
     <div data-role="page" id="viewToDo">
 
-    <!-- VIEW TASKS IN PROGRESS Header -->
+        <!-- VIEW TASKS IN PROGRESS Header -->
         <div data-role="header" data-theme='c'>
             <h1>Tasks in Progress</h1>
 
@@ -89,18 +96,19 @@
             </div>
         </div>
 
-    <!-- VIEW TASKS IN PROGRESS Content -->
-        <div data-role="content" data-theme='c'style="background-image: url(CSS/Images/paper.jpg) ; background-size: cover ;">
-            <div class="itemContainerTasksInProgress">
+        <!-- VIEW TASKS IN PROGRESS Content -->
+        <div data-role="content" data-theme='c'
+            style="background-image: url(CSS/Images/paper.jpg) ; background-size: cover ;">
+            <div class="itemContainerTasks">
 
                 <!-- Image & Buttons on LEFT -->
-                <div class="leftSubContainer"><br>
+                <div class="leftSubContainer"><br><br><br>
                     <img src="CSS/Images/todo.jpg" alt="Desk with To Do List" class="image" width="380" height="220">
 
                     <!-- Order by priority buttons -->
                     <input type="button" value="View My Tasks" id="viewMyTasksButton">
-                    <input type="button" value="Prioritize My Tasks" id="prioritizeButton">
-                    <input type="button" value="View High Priority Tasks Only" id="viewHighPriorityOnlyButton"><br>
+                    <input type="button" value="View High Priority Tasks Only"
+                        id="viewHighPriorityOnlyButton"><br><br><br><br><br>
                 </div>
 
                 <!-- Task output on RIGHT -->
@@ -111,15 +119,17 @@
             </div>
         </div>
 
-    <!-- VIEW TASKS IN PROGRESS Footer -->
-        <div data-role="footer" data-theme='c'><h3>Copyright 2023 by Skyler Conley & Alesia Cameron</h3></div>
+        <!-- VIEW TASKS IN PROGRESS Footer -->
+        <div data-role="footer" data-theme='c'>
+            <h3>Copyright 2023 by Skyler Conley & Alesia Cameron</h3>
+        </div>
     </div>
 
     <!-- ==================================================================================================================== -->
     <!-- VIEW COMPLETED TASKS PAGE ========================================================================================== -->
     <div data-role="page" id="viewCompleted">
 
-    <!-- VIEW COMPLETED TASKS Header -->
+        <!-- VIEW COMPLETED TASKS Header -->
         <div data-role="header" data-theme='c'>
             <h1>Tasks Completed</h1>
 
@@ -132,30 +142,35 @@
             </div>
         </div>
 
-    <!-- VIEW COMPLETED TASKS Content -->
-        <div data-role="content" data-theme='c'style="background-image: url(CSS/Images/paper.jpg) ; background-size: cover;">
-            <div class="completeTasks">
+        <!-- VIEW COMPLETED TASKS Content -->
+        <div data-role="content" data-theme='c'
+            style="background-image: url(CSS/Images/paper.jpg) ; background-size: cover;">
+            <div class="itemContainerTasks">
 
                 <!-- Image & Buttons on LEFT -->
-                <div class="leftSubContainer"><br>
-                    <img src="CSS/Images/todo.jpg" alt="Desk with To Do List" class="image" width="380" height="220">
+                <div class="leftSubContainer"><br><br><br><br><br>
+                    <img src="CSS/Images/clouds.png" alt="Desk with To Do List" class="image" width="380" height="220">
 
-                    <input type="button" value="View My Completed Tasks" id="viewMyCompletedTasksButton">
+                    <input type="button" value="View My Completed Tasks"
+                        id="viewMyCompletedTasksButton"><br><br><br><br>
                     <br>
                 </div>
 
                 <!-- Task output on RIGHT -->
                 <div class="rightSubContainer">
-                    <div id="completedTaskDisplay"></div><br>
+                    <div id="completedTaskDisplay"></div>
                 </div>
 
             </div>
         </div>
 
-    <!-- VIEW COMPLETED TASKS Footer -->
-        <div data-role="footer" data-theme='c'><h3>Copyright 2023 by Skyler Conley & Alesia Cameron</h3></div>
+        <!-- VIEW COMPLETED TASKS Footer -->
+        <div data-role="footer" data-theme='c'>
+            <h3>Copyright 2023 by Skyler Conley & Alesia Cameron</h3>
+        </div>
     </div>
     <!-- ==================================================================================================================== -->
     <script src="main.js"></script>
 </body>
+
 </html>
