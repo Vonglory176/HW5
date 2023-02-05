@@ -2,7 +2,6 @@ $(document).ready(function () {
     $('#addTaskButton').on('click', addTask)
     $('#viewMyTasksButton').on('click', viewMyTasks)
     $('#viewHighPriorityOnlyButton').on('click', showHighPriorityTasks)
-    //$('#prioritizeButton').on('click', prioritizeTasks())
     $('#viewMyCompletedTasksButton').on('click', printCompletedTasks)
 });
 
