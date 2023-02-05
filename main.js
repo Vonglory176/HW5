@@ -115,7 +115,7 @@ function colorPicker(priority) {
 function printCompletedTasks() {
     for (let i = 0; i < toDoArray.length; i++){
         if (toDoArray[i].priority === 5) {
-            let element = $(`<li>${toDoArray[i].task}" -- Completed!"</li>`)//Setting HTML
+            let element = $(`<li>${toDoArray[i].task} -- Completed!</li>`)//Setting HTML
             $(element).css('color',`${colorPicker(toDoArray[i].priority)}`)//Setting Color
             $("#completedTaskDisplay").append($(element))//Printing to Screen
         }
